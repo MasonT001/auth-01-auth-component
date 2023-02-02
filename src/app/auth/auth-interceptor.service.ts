@@ -15,6 +15,6 @@ constructor(private authService: AuthService) { }
             }
             const modifiedReq = req.clone({params: new HttpParams().set('auth', user.token)})
             return next.handle(modifiedReq)
-        }));   
-    }
+        })) 
+        }
 }
